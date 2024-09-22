@@ -4,6 +4,7 @@ import time
 import json
 import requests
 import base64
+import image
 
 
 # Streamlit Page Configuration
@@ -114,11 +115,11 @@ if mode == "Chat with Streamly":
 
     # Display chat history
     for message in st.session_state.history[-NUMBER_OF_MESSAGES_TO_DISPLAY:]:
-         role = message["role"]
+        role = message["role"]
         avatar_image = "imgs/avatar_streamly.png" if role == "assistant" else "imgs/stuser.png" if role == "user" else None
         with st.chat_message(role, avatar=avatar_image):
             st.write(message["content"])
 
 else:
-    none
+    None
         
