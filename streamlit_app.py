@@ -43,37 +43,12 @@ st.set_page_config(
 st.title("Streamly Streamlit Assistant")
 
 
-# Insert custom CSS for glowing effect
-st.markdown(
-    """
-    <style>
-    .cover-glow {
-        width: 100%;
-        height: auto;
-        padding: 3px;
-        box-shadow: 
-            0 0 5px #330000,
-            0 0 10px #660000,
-            0 0 15px #990000,
-            0 0 20px #CC0000,
-            0 0 25px #FF0000,
-            0 0 30px #FF3333,
-            0 0 35px #FF6666;
-        position: relative;
-        z-index: -1;
-        border-radius: 45px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
 # Load and display sidebar image
 img_path = "data/o4a_logo.png"
 img_base64 =img_to_base64(img_path)
 if img_base64:
     st.sidebar.markdown(
-        f'<img src="data:image/png;base64,{img_base64}" class="cover-glow">',
+        f'<img src="data:image/png;base64,{img_base64}" >',
         unsafe_allow_html=True,
     )
 
