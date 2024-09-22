@@ -69,7 +69,7 @@ st.markdown(
 )
 
 # Load and display sidebar image
-img_path = "imgs/sidebar_streamly_avatar.png"
+img_path = "data/o4a_logo.png"
 img_base64 =img_to_base64(img_path)
 if img_base64:
     st.sidebar.markdown(
@@ -79,36 +79,11 @@ if img_base64:
 
 st.sidebar.markdown("---")
 
-# Sidebar for Mode Selection
-mode = st.sidebar.radio("Select Mode:", options=["Latest Updates", "Chat with Streamly"], index=1)
-
 st.sidebar.markdown("---")
 
-# Display basic interactions
-show_basic_info = st.sidebar.checkbox("Show Basic Interactions", value=True)
-if show_basic_info:
-    st.sidebar.markdown("""
-    ### Basic Interactions
-    - **Ask About Streamlit**: Type your questions about Streamlit's latest updates, features, or issues.
-    - **Search for Code**: Use keywords like 'code example', 'syntax', or 'how-to' to get relevant code snippets.
-    - **Navigate Updates**: Switch to 'Updates' mode to browse the latest Streamlit updates in detail.
-    """)
-
-# Display advanced interactions
-show_advanced_info = st.sidebar.checkbox("Show Advanced Interactions", value=False)
-if show_advanced_info:
-    st.sidebar.markdown("""
-    ### Advanced Interactions
-    - **Generate an App**: Use keywords like **generate app**, **create app** to get a basic Streamlit app code.
-    - **Code Explanation**: Ask for **code explanation**, **walk me through the code** to understand the underlying logic of Streamlit code snippets.
-    - **Project Analysis**: Use **analyze my project**, **technical feedback** to get insights and recommendations on your current Streamlit project.
-    - **Debug Assistance**: Use **debug this**, **fix this error** to get help with troubleshooting issues in your Streamlit app.
-    """)
-
-st.sidebar.markdown("---")
 
 # Load and display image with glowing effect
-img_path = "imgs/stsidebarimg.png"
+img_path = "data/schneider-electric-favicon.png"
 img_base64 = img_to_base64(img_path)
 if img_base64:
     st.sidebar.markdown(
