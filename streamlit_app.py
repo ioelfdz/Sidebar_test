@@ -87,7 +87,7 @@ img_path = "data/schneider-electric-favicon.png"
 img_base64 = img_to_base64(img_path)
 if img_base64:
     st.sidebar.markdown(
-        f'<img src="data:image/png;base64,{img_base64}" class="cover-glow">',
+        f'<img src="data:image/png;base64,{img_base64}" >',
          unsafe_allow_html=True,
     )
 
