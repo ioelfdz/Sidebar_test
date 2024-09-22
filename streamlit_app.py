@@ -18,8 +18,8 @@ def img_to_base64(image_path):
 
 # Streamlit Page Configuration
 st.set_page_config(
-    page_title="Streamly - An Intelligent Streamlit Assistant",
-    page_icon="imgs/avatar_streamly.png",
+    page_title="One4All Supervisor Charts",
+    page_icon="data/o4a_logo.jpg",
     layout="wide",
     initial_sidebar_state="auto",
     menu_items={
