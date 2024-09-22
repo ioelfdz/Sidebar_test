@@ -116,19 +116,5 @@ if img_base64:
          unsafe_allow_html=True,
     )
 
-if mode == "Chat with Streamly":
-    chat_input = st.chat_input("Ask me about Streamlit updates:")
-    if chat_input:
-        latest_updates = load_streamlit_updates()
-        on_chat_submit(chat_input, latest_updates)
 
-    # Display chat history
-    for message in st.session_state.history[-NUMBER_OF_MESSAGES_TO_DISPLAY:]:
-        role = message["role"]
-        avatar_image = "imgs/avatar_streamly.png" if role == "assistant" else "imgs/stuser.png" if role == "user" else None
-        with st.chat_message(role, avatar=avatar_image):
-            st.write(message["content"])
-
-else:
-    None
         
